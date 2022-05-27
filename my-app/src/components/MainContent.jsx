@@ -15,7 +15,7 @@ const ListOfRadio = (props) => {
     </li>)
     return(
 
-        <ul>{listItems}</ul>
+        <ul className = "list" >{listItems}</ul>
  
     );
 }
