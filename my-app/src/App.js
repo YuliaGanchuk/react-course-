@@ -1,10 +1,10 @@
 // import logo from './logo.svg';
-// import './App.css';
+// import './App.scss';
 import React from "react";
 import {Header} from "./components/Header";
 import {MainContent} from "./components/MainContent";
 import {Footer} from "./components/Footer";
-import './styles/App.css';
+import './styles/App.scss';
 
 function App() {
   const reviewerName = "Yullia Hanchuk";

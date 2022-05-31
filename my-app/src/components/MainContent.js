@@ -7,6 +7,7 @@ import {Feedback} from "./Feedback";
 
 export const MainContent = (props) => {
     const number = props.value;
+    const numberCheckedLi = 10;
     const [stateInput, setStateInput] = useState("");
     const [stateList, setStateList] = useState(number);
     const [ review, setReview] = useState([]);
@@ -20,7 +21,7 @@ export const MainContent = (props) => {
     const onClickFunc = () => {
         setReview([...review, {rateNumber: stateList, rateText: stateInput}]);
         setStateInput("");
-        setStateList(number);
+        setStateList(numberCheckedLi);
     }
 
     return(
