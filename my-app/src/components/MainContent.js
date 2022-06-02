@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import {ListOfRadio} from "./ListOfRadio";
-import {Input} from "./Input";
-import {Button} from "./Button";
-import {Feedback} from "./Feedback";
+import {ListOfRadio} from "./ListOfRadio/ListOfRadio";
+import {Input} from "./Input/Input";
+import {Button} from "./Button/Button";
+import {Feedback} from "./Feedback/Feedback";
 
 
 export const MainContent = (props) => {
@@ -26,10 +26,14 @@ export const MainContent = (props) => {
 
     return(
         <div>
-            <h3>How would you rate our course?</h3>
-            <ListOfRadio numberList = {number} stateList= {stateList} onChangeFuncList = {onChangeFuncList}/>
-            <Input stateInput={stateInput} onChangeFuncInput={onChangeFuncInput}/>
-            <Button stateInput={stateInput} onClickFunc ={onClickFunc}/>
+            <div className="mainContainer">
+                <h3 className="titleForList">How would you rate our course?</h3>
+                <ListOfRadio numberList = {number} stateList= {stateList} onChangeFuncList = {onChangeFuncList}/>
+                <div className="inputButton">
+                    <Input stateInput={stateInput} onChangeFuncInput={onChangeFuncInput}/>
+                    <Button stateInput={stateInput} onClickFunc ={onClickFunc}/>
+                </div>
+            </div>
             <Feedback review= {review}/>
         </div>
     );

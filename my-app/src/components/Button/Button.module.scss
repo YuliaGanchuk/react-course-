@@ -1,0 +1,23 @@
+@import "./../../styles/function_mixin.scss";
+
+.buttonStyle{
+    @include size(80px,34px);
+    @include backTextColor($backColorMain,$colorWhite);
+    @include fontSizeWeight(13px,700);
+    border: none;
+    @include myPosition(absolute, 8px, 10px);
+    border-radius: 7px;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:disabled{
+        @include backTextColor($colorGray,$colorDarkGray);
+        
+        &:hover{
+            cursor: initial;
+        }
+    }
+    
+}

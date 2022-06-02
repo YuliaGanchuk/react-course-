@@ -1,0 +1,42 @@
+@import "./../../styles/function_mixin.scss";
+
+
+.listStyle{
+    @include displayFlex(row, space-between);
+    flex-wrap: wrap;
+    margin: 30px 15px;
+    list-style-type: none;
+
+    li{
+        height: 45px;
+        position: relative;
+
+    }
+
+    input{
+        @include size(45px, 45px);
+        background-color: $colorLightGray;
+        @extend %borderRadCircle;
+        appearance: none;
+
+        &:checked{
+           background-color: $colorGreen;
+
+            +label{
+                color: $colorWhite;
+            }
+        }
+    }
+    label{
+        @include myPosition(absolute, 10px, 10px);
+        @include size(25px, 25px);
+        @include fontSizeWeight(20px,700);
+        text-align: center;
+    }
+
+    input, label {
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

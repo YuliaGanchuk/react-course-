@@ -5,7 +5,6 @@ export const Feedback = ({review}) => {
         review.map( (element) => (
             <p key={Date.now()}> {element.rateNumber} - {element.rateText}</p>
         ))
-        
     );
 
 }
