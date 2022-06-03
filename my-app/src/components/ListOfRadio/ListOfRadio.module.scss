@@ -30,7 +30,7 @@
     label{
         @include myPosition(absolute, 10px, 10px);
         @include size(25px, 25px);
-        @include fontSizeWeight(20px,700);
+        @include fontSizeWeight(18px,600);
         text-align: center;
     }
 

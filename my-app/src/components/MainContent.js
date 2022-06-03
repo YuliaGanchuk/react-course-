@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {ListOfRadio} from "./ListOfRadio/ListOfRadio";
 import {Input} from "./Input/Input";
 import {Button} from "./Button/Button";
@@ -23,6 +23,15 @@ export const MainContent = (props) => {
         setStateInput("");
         setStateList(numberCheckedLi);
     }
+
+    useEffect(() => {
+        document.getElementById("inputItem").addEventListener("keydown", function (event) {
+                if (event.code === "Enter" || event.code === "NumpadEnter") {
+                    event.preventDefault();
+                    document.getElementById("submitButton").click();
+                }
+            });
+    }, []);
 
     return(
         <div>

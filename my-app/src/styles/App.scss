@@ -21,10 +21,7 @@
 }
 .mainContainer{
     @include size(95%, 270px);
-    background-color: $colorWhite;
-    border-radius: 15px;
-    padding: 40px;
-    margin: 2.5%;
+    @extend %backBorderPadMarg;
     @include displayFlex(column, space-between);
 
     .titleForList{
