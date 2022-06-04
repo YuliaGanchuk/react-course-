@@ -46,5 +46,4 @@ export const MainContent = (props) => {
             <Feedback review= {review}/>
         </div>
     );
-
 }

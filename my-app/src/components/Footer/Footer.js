@@ -5,5 +5,4 @@ import styles from "./../Header/Header.module.scss"
     return(
         <h2 className={styles.headerStyle}>© Made by {props.name}</h2>
     );
-
 }
