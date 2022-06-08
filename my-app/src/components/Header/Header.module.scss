@@ -1,0 +1,9 @@
+@import "./../../styles/function_mixin.scss";
+
+.headerStyle{
+    @include backTextColor($backColorAdd,$colorWhite);
+    @include fontSizeWeight(22px,700);
+    height: 50px;
+    @include displayFlex(row, center);
+    align-items: center;
+}

@@ -1,9 +1,7 @@
-// import logo from './logo.svg';
-// import './App.scss';
 import React from "react";
-import {Header} from "./components/Header";
+import {Header} from "./components/Header/Header";
 import {MainContent} from "./components/MainContent";
-import {Footer} from "./components/Footer";
+import {Footer} from "./components/Footer/Footer";
 import './styles/App.scss';
 
 function App() {

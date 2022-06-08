@@ -1,15 +1,34 @@
-/* *{
+@import "./function_mixin.scss";
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
+
+@font-face {
+    font-family: 'Fira_Sans';
+    src: local('Fira_Sans'), url(./../Fira_Sans_font/FiraSans-Regular.ttf) format('truetype');
+}
 
 #root{
-    display: flex;
-    justify-content: center;
+    @include displayFlex(row, center);
+    font-family: Fira_Sans, Arial, serif;
 }
-.App, .list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.App{
+    @include size(60vw,100vh);
+    background-color: $backColorMain;
+}
+.mainContainer{
+    @include size(95%, 270px);
+    @extend %backBorderPadMarg;
+    @include displayFlex(column, space-between);
+
+    .titleForList{
+        @include displayFlex(row, center);
+        @include fontSizeWeight(20px,700);
+    }
+}
+.inputButton{
+    position: relative;
 }

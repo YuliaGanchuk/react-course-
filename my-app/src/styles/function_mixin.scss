@@ -1,0 +1,43 @@
+$backColorMain : #202142;
+$backColorAdd : #131428;
+$colorWhite : #FFFFFF;
+$colorGreen : #008000;
+$colorLightGray : #F4F4F4;
+$colorGray : #CCCCCC;
+$colorDarkGray : #414141;
+
+%borderRadCircle{
+    border-radius: 50%;
+}
+%backBorderPadMarg{
+    background-color: $colorWhite;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 2.5%;
+}
+
+@mixin size($widthItem, $minHeightItem){
+    width: $widthItem;
+    min-height: $minHeightItem;
+}
+
+@mixin backTextColor($backCol,$textCol){
+    background-color: $backCol;
+    color: $textCol;
+}
+
+@mixin fontSizeWeight($fontSize,$fontWeight,){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+@mixin displayFlex($flexDir, $justCont){
+    display: flex;
+    flex-direction: $flexDir;
+    justify-content: $justCont;
+}
+@mixin myPosition($position, $top, $right){
+    position: $position;
+    top: $top;
+    right: $right;
+}

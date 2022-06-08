@@ -1,4 +1,7 @@
 import React from "react";
+import styles from "./ListOfRadio.module.scss"
+
+
 
 export const ListOfRadio = ({numberList, stateList, onChangeFuncList}) => {
 
@@ -9,6 +12,6 @@ export const ListOfRadio = ({numberList, stateList, onChangeFuncList}) => {
         </li>
     )
     return(
-        <ul className = "list" >{listItems}</ul>
+        <ul className={styles.listStyle}>{listItems}</ul>
     );
 }
